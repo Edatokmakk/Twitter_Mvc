@@ -1,0 +1,61 @@
+﻿@*@model TWITTER_MVC.Models.Tweets
+
+@{
+    ViewData["Title"] = "UserTweets";
+    Layout = "~/Views/Home/Profile.cshtml";
+}
+<link href="~/css/userTweet.css" rel="stylesheet" type="text/css" />
+
+@foreach (var item in @ViewBag.Twet)
+{
+    <div class=row style="border-bottom: 1px groove #a5a9ac !important;border-left:1px groove #a5a9ac !important;">
+        <div class="tweet-box-content">
+            <div class="tweetbox-user-icon-col">
+                <img src="~/img/pp.jpg" alt="John Doe" class="mr-3 mt-3 ml-4 rounded-circle" style="width:50px;float:right !important;">
+            </div>
+
+            <div class="mt-3 tweetbox-message-content" style="width: 80% !important;color:white !important;">
+                <h4 style="font-size:15px;line-height:20px;font-weight:700;">@ViewBag.UserName</h4>
+                <form class="input-group">
+
+                    <p style="font-size:15px;line-height:20px;font-weight:400;">@item.tweet</p>
+                    <div id="ikonlar">
+                        <ul class="nav nav-pills nav-pills-custom">
+                            <li>
+                                <span id="icn2">
+                                    <i style=" margin-top:20px;
+    font-size: 15px !important;
+    color: grey !important;" class="far fa-comment"></i>
+                                </span>
+                            </li>
+                            <li>
+                                <span id="icn2">
+                                    <i style=" margin-left:15rem;margin-top:20px;
+    font-size: 15px !important;
+    color: grey !important;" class="fas fa-retweet"></i>
+                                </span>
+
+                            </li>
+                            <li>
+                                <span id="icn2">
+                                    <i style="margin-left:15rem;margin-top:20px;
+    font-size: 15px !important;
+    color: grey !important;" class="far fa-heart"></i>
+                                </span>
+
+                            </li>
+                            <li>
+                                <span id="icn2">
+                                    <i style=" margin-left:15rem;margin-top:20px;
+    font-size: 15px !important;
+    color: grey !important;" class="far fa-share-square"></i>
+                                </span>
+
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+}*@

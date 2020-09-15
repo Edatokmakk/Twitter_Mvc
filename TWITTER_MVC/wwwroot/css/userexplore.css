@@ -1,0 +1,46 @@
+﻿
+.text-block {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    background-color: transparent;
+    color: white;
+}
+
+.media-body a {
+    background-color: #253341;
+    border-radius: 16px;
+    display: inline-block;
+    color: #1DA1F2;
+    border: 1px double #1DA1F2;
+    font-size: 15px;
+    line-height: 20px;
+    margin-left: 4rem;
+    font-weight: bolder;
+}
+
+.media-body h4 {
+    display: inline-block;
+    font-weight: bolder;
+    font-size: 15px;
+    color: white;
+}
+
+.media-body p {
+    color: grey;
+}
+
+.panel-title {
+    font-size: 19px;
+    font-weight: 800;
+    line-height: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.media {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px groove #a5a9ac;
+}

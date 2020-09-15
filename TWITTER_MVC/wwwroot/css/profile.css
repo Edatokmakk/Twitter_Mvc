@@ -1,0 +1,82 @@
+﻿#ttlrow {
+    height: 55px;
+    border-bottom: 2px groove #505b65;
+    position: fixed;
+    z-index: 100;
+    width: 70rem;
+    background-color: #15202B !important;
+}
+#stn {
+    background-color: #15202B;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+    #tt
+    {
+    position:relative;
+    }
+    #arkaplanJpg {
+        background-position: center;
+        color: #f2f2f2;
+        text-align: center;
+    }
+
+#profilPp {
+    border-radius: 50%;
+    z-index: 99;
+    float: left;
+    display: block;
+    margin-top: 15rem;
+    margin-left: 14rem;
+}
+#submit_button4 {
+    background-color: #15202B !important;
+    border: 1px solid #1da1f2;
+    border-radius: 100px;
+    box-shadow: none;
+    color: #1da1f2 !important;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 45px;
+    line-height: 20px;
+    padding: 12px 20px;
+    margin-left:35rem;
+    margin-top:1rem;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: 150px;
+}
+.tweet-box-content {
+    height: 120px;
+    background-color: #15202B;
+    width: 100%;
+}
+
+.tweetbox-user-icon-col {
+    float: left;
+    overflow: hidden;
+}
+
+
+.tweetbox-message-content {
+    float: left;
+    width: 90%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.tweetbox-message-input-area {
+    display: block;
+    height: 60%;
+    background-color: red;
+    width: 100%;
+}
+
+.tweetbox-toolbar-area {
+    height: 40%;
+    display: block;
+    background-color: blue;
+    width: 100%;
+}

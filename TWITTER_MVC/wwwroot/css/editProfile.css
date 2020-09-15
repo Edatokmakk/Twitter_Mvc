@@ -1,0 +1,142 @@
+﻿#upload {
+    opacity: 0;
+}
+
+#upload-label {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+}
+
+.image-area {
+    padding: 1rem;
+    position: relative;
+}
+
+    .image-area::before {
+        color: #fff;
+        font-weight: bold;
+        text-transform: uppercase;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 0.8rem;
+        z-index: 1;
+    }
+
+    .image-area img {
+        z-index: 2;
+        position: relative;
+    }
+
+/*
+*
+* ==========================================
+* FOR DEMO PURPOSES
+* ==========================================
+*
+*/
+body {
+    min-height: 100vh;
+    background-color: #39424C !important;
+}
+
+.form-group label {
+    padding: 6px;
+    font-size: 15px;
+    color: #8899a6;
+    line-height: 20px;
+    font-weight: 400;
+    display: block !important;
+}
+
+.form-group input {
+    display: block !important;
+    font-size: 19px;
+    background: transparent;
+    border: none;
+    outline: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+/*PP*/
+.avatar-upload {
+    position: absolute;
+    max-width: 100px;
+    margin: 50px auto;
+}
+
+    .avatar-upload .avatar-edit {
+        position: relative;
+        right: 12px;
+        z-index: 103;
+        top: 10px;
+        margin-left: 6rem;
+        margin-bottom: 1rem;
+    }
+
+.avatar-edit {
+    margin-top: -10rem;
+}
+
+    .avatar-edit input {
+        display: none;
+    }
+
+    .avatar-edit label {
+        width: 34px;
+        height: 34px;
+        margin-top: 0;
+        border-radius: 100%;
+        background: transparent;
+        border: 1px solid transparent;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+        cursor: pointer;
+        font-weight: normal;
+        transition: all .2s ease-in-out;
+    }
+
+        .avatar-edit label:hover {
+            background: #f1f1f1;
+            border-color: #d6d6d6;
+        }
+
+        .avatar-edit label:after {
+            content: "\f040";
+            font-family: 'FontAwesome';
+            color: #757575;
+            position: absolute;
+            top: 10px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            margin: auto;
+        }
+
+.avatar-preview ::before {
+    position: absolute;
+}
+
+.avatar-preview {
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    border-radius: 100%;
+    border: 4px solid #15202B;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    z-index: 102 !important;
+    margin-top: -80px;
+    margin-left: 13px;
+}
+
+    .avatar-preview div {
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }

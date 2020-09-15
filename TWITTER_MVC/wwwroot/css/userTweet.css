@@ -1,0 +1,32 @@
+﻿.tweet-box-content {
+    height: 120px;
+    background-color: #15202B;
+    width: 100%;
+}
+
+.tweetbox-user-icon-col {
+    float: left;
+    overflow: hidden;
+}
+
+
+.tweetbox-message-content {
+    float: left;
+    width: 90%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.tweetbox-message-input-area {
+    display: block;
+    height: 60%;
+    background-color: red;
+    width: 100%;
+}
+
+.tweetbox-toolbar-area {
+    height: 40%;
+    display: block;
+    background-color: blue;
+    width: 100%;
+}

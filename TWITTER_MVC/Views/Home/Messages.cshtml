@@ -1,0 +1,137 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Mesajlar</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="~/css/anasayfa.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div id="stn" class="col-sm-3" style="border-right:1.5px groove grey;">
+                <div class="StaticLoggedOutHomePage-communicationContent">
+                    <div class="StaticLoggedOutHomePage-communicationItem"><i class="fab fa-twitter" style="color: white; font-size:27px;margin-bottom:6px;margin-top:13px"></i></div>
+                    <div class="StaticLoggedOutHomePage-communicationItem">
+                        <span class="Icon">
+                            <i class="fas fa-home"></i>
+                        </span>Anasayfa
+                    </div>
+                    <div class="StaticLoggedOutHomePage-communicationItem">
+                        <span class="Icon">
+                            <i class="fas fa-hashtag"></i>
+                        </span>Keşfet
+                    </div>
+                    <a asp-area="" asp-controller="Home" asp-action="Notifications">
+                        <div class="StaticLoggedOutHomePage-communicationItem" href="/Views/Home/Notifications.cshtml">
+                            <span class="Icon Icon--reply">
+                                <i class="far fa-bell"></i>
+                            </span>Bildirimler
+                        </div>
+                    </a>
+                    <a asp-area="" asp-controller="Home" asp-action="Messages">
+                        <div class="StaticLoggedOutHomePage-communicationItem" href="/Views/Home/Messages.cshtml">
+                            <span class="Icon Icon--reply">
+                                <i class="far fa-envelope"></i>
+                            </span>Mesajlar
+                        </div>
+                    </a>
+                    <div class="StaticLoggedOutHomePage-communicationItem">
+                        <span class="Icon Icon--reply">
+                            <i class="far fa-bookmark"></i>
+                        </span>Yer İşaretleri
+                    </div>
+                    <div class="StaticLoggedOutHomePage-communicationItem">
+                        <span class="Icon Icon--reply">
+                            <i class="far fa-list-alt"></i>
+                        </span>Listeler
+                    </div>
+                    <div class="StaticLoggedOutHomePage-communicationItem">
+                        <span class="Icon Icon--reply">
+                            <i class="far fa-user"></i>
+                        </span>Profil
+                    </div>
+                    <div class="StaticLoggedOutHomePage-communicationItem">
+                        <span class="Icon Icon--reply">
+                            <i class="fas fa-ellipsis-h"></i>
+                        </span>Daha Fazla
+                    </div>
+                    <div class="sign-up-box">
+                        <input type="submit" value="Tweetle" id="submit_button" class="signup EdgeButton EdgeButton--primary EdgeButton--large submit">
+                    </div>
+                </div>
+
+            </div>
+            <div id="stn" class="col-sm-3">
+                <div class="row">
+                    <h3 class="panel-title" style="color:white;padding: 10px;margin-top:10px;" fixed-top>
+                        <strong>Mesajlar</strong>
+                        <!-- <small><a href="#">Refresh</a> ● <a href="#">View all</a></small> -->
+                    </h3>
+
+                    <div class="input-group" style="border-bottom:1.5px groove grey;padding:10px;border-top:1.5px groove grey;">
+                        <input style="border:none !important;height:40px;width: 33rem;margin-top: 8px;margin-left: 10px;background-color: #253341;font-size: 15px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" placeholder="Kişi ve Grup Ara" type="text" class="form-control-nav" id="search" aria-describedby="search1">
+                    </div>
+                    <div class="media">
+                        <div class="media-body" id="ilgi">
+                            <p style="font-size: 13px;">Türkiye tarihinde gündemde</p>
+                            <h4 class="media-heading">#DolarınSaltanatıYıkılıyor</h4>
+                            <p style="font-size: 15px;">Gündem konusu: Dolar 7.15, #DolarTL</p>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-body" id="ilgi">
+                            <p style="font-size: 13px;">Türkiye tarihinde gündemde</p>
+                            <h4 class="media-heading">#TemmuzlarBizimdir</h4>
+                            <p style="font-size: 15px;">1.730 Tweet</p>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-body" id="ilgi">
+                            <p style="font-size: 13px;">Türkiye tarihinde gündemde</p>
+                            <h4 class="media-heading">#ÇaycıHüseyin</h4>
+                            <p style="font-size: 15px;">Gündem konusu: Galatasaray, #süperlig</p>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-body" id="ilgi">
+                            <p style="font-size: 13px;">Türkiye tarihinde gündemde</p>
+                            <h4 class="media-heading">16 Temmuz'da</h4>
+                            <p style="font-size: 15px;">Gündem konusu: Hüseyin İnan</p>
+                        </div>
+                    </div>
+                    <div class="media">
+                        <div class="media-body" id="ilgi">
+                            <p style="font-size: 13px;">Türkiye tarihinde gündemde</p>
+                            <h4 class="media-heading">Fatih Tezcan</h4>
+                            <p style="font-size: 15px;">Gündem konusu: Dolar 7.15, #DolarTL</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div id="stn" class="col-sm-5">
+                <div class="container">
+                    <!-- <h4>Seçili bir mesajın yok.</h4>
+                      <p>Mevcut mesajlarından birini seç veya yeni bir mesaja başla.</p>
+                      <input type="submit" value="Yeni Mesaj" id="submit_button" class="signup EdgeButton EdgeButton--primary EdgeButton--large submit"style=" margin-left:28rem;width:90px !important;"> -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    </div>
+</body>
+</html>

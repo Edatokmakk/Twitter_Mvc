@@ -1,0 +1,31 @@
+﻿
+.media-body a {
+    background-color: #253341;
+    border-radius: 16px;
+    display: inline-block;
+    color: #1DA1F2;
+    border: 1px double #1DA1F2;
+    font-size: 15px;
+    line-height: 20px;
+    margin-left: 4rem;
+    font-weight: bolder;
+}
+
+.media-body h4 {
+    display: inline-block;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 700;
+    color: white;
+}
+
+.media-body p {
+    font-size:15px;
+    line-height:20px;
+    font-weight:400;
+    color: #8899a6;
+}
+.media {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin:20px;
+}

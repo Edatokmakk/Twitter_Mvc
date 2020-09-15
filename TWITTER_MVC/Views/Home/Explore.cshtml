@@ -1,0 +1,166 @@
+﻿@using Microsoft.AspNetCore.Http;
+@{
+    ViewData["Title"] = "Explore";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keşfet</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="~/css/kesfet.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-5">
+            <div class="row">
+                <span><i class="fab fa-twitter" style="color: white; font-size:27px;"></i></span>
+                <input style="border:none !important;height:33px;width: 64rem;background-color: #253341;font-size: 15px;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;margin-left: 2rem;" placeholder="Twitter'da Ara" type="text" class="form-control-nav" id="search" aria-describedby="search1">
+            </div>
+
+        </div>
+        <div class="col-sm-5">
+            <div class="row" id="tit">
+                <a asp-area="" asp-controller="Home" asp-action="Login">
+                    <input style="width: 10rem !important;height: 20px !important;margin-right: 10px;" type="submit" value="Giriş Yap" id="submit_button">
+                </a>
+                <a asp-area="" asp-controller="Home" asp-action="Signup">
+                    <input style="width: 10rem !important;height: 20px !important;margin-right: 10px;" type="submit" value="Kaydol" id="submit_button2">
+                </a>
+                <i style="color:#1da1f2;font-size:24px;text-align: center;margin-top:20px;margin-left: 10px;" class="fas fa-ellipsis-h"></i>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-2">
+            </div>
+            <div class="col-sm-5" style="border-left: 1px groove #a5a9ac;
+        border-right: 1px groove #a5a9ac;padding-left: 0;padding-right: 0;margin-top:0;">
+                <div id="ttlrow" class=row>
+                    <p style="color:white;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: 19px;font-weight: 800;line-height:25px;margin-left: 3rem;margin-top:1rem;">Keşfet</p>
+                    <i class="fas fa-cog" style="font-size:24px;color:#1DA1F2;margin-left: 59rem;margin-top: 1rem;"></i>
+                </div>
+                <div class="img">
+                    <img class="img-fluid"  alt="" src="~/img/maske.jpg" style="width:70.2em !important;margin-right:15px !important;">
+                    <div class="text-block">
+                        <p style="font-size: 13px;line-height: 17px;font-weight: 400;">Kovid-19 CANLI</p>
+                        <p style="font-size: 23px;line-height: 30px;font-weight: 800;">Türkiye'de Kovid-19 ile ilgili canlı gelişmeler</p>
+                    </div>
+                </div>
+                <div id="space" class="row-fluid" style="background-color:#253341;height:10px;"></div>
+                <h3 class="panel-title" style="color:white;">
+                    <strong>İlgini çekebilecek gündemler</strong>
+                    <!-- <small><a href="#">Refresh</a> ● <a href="#">View all</a></small> -->
+                </h3>
+                <div class="media">
+                    <div class="media-body" id="ilgi">
+                        <p style="font-size: 13px;">Türkiye tarihinde gündemde</p>
+                        <h4 class="media-heading">#DolarınSaltanatıYıkılıyor</h4>
+                        <p style="font-size: 15px;">Gündem konusu: Dolar 7.15, #DolarTL</p>
+                    </div>
+                </div>
+                <div class="media">
+                    <div class="media-body" id="ilgi">
+                        <p style="font-size: 13px;">Türkiye tarihinde gündemde</p>
+                        <h4 class="media-heading">#TemmuzlarBizimdir</h4>
+                        <p style="font-size: 15px;">1.730 Tweet</p>
+                    </div>
+                </div>
+                <div class="media">
+                    <div class="media-body" id="ilgi">
+                        <p style="font-size: 13px;">Türkiye tarihinde gündemde</p>
+                        <h4 class="media-heading">#ÇaycıHüseyin</h4>
+                        <p style="font-size: 15px;">Gündem konusu: Galatasaray, #süperlig</p>
+                    </div>
+                </div>
+                <div class="media">
+                    <div class="media-body" id="ilgi">
+                        <p style="font-size: 13px;">Türkiye tarihinde gündemde</p>
+                        <h4 class="media-heading">16 Temmuz'da</h4>
+                        <p style="font-size: 15px;">Gündem konusu: Hüseyin İnan</p>
+                    </div>
+                </div>
+                <div class="media">
+                    <div class="media-body" id="ilgi">
+                        <p style="font-size: 13px;">Türkiye tarihinde gündemde</p>
+                        <h4 class="media-heading">Fatih Tezcan</h4>
+                        <p style="font-size: 15px;">Gündem konusu: Dolar 7.15, #DolarTL</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-5">
+                <div id="right-pnl" class="panel panel-default panel-custom">
+                    <div class="container-fluid">
+                        <img style=" width: 25rem;height: 25rem;" src="~/img/twitter_login_sidebar_illustration.png">
+                    </div>
+                    <div class="panel-body">
+                        <form id="tip-form">
+                            <div class="form-group">
+                                <div>
+                                    <label for="input-group">Telefon, e-posta veya kullanıcı adı</label>
+                                    <div class="input-group">
+                                        <input type="text" step="0.01" class="form-control">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="input-group">Şifre</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="LoginForm-rememberForgot">
+                                <a class="forgot" href="begin_password_reset.html" rel="noopener" style="color: #1da1f2;">Şifreni mi unuttun?</a>
+                            </div>
+
+                            <div class="sign-up-box">
+                                <a asp-area="" asp-controller="Home" asp-action="Login">
+                                    <input type="submit" value="Giriş Yap" id="submit_button">
+                                </a>
+                            </div>
+
+                            <div class="text">veya</div>
+                            <a asp-area="" asp-controller="Home" asp-action="Signup">
+                                <div class="sign-up-box"> <input type="submit" value="Kaydol" id="submit_button2"></div>
+                            </a>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="well well-sm">
+                    <ul class="list-inline">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Cookies</a></li>
+                        <li><a href="#">Ads info</a></li>
+                        <li><a href="#">Brand</a></li>
+                        <li>© 2020 Twitter,Inc.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+
+

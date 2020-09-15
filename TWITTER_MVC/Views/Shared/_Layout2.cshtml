@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Anasayfa</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="~/css/anasayfa.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div id="stn" class="col-sm-3">
+                <div class="StaticLoggedOutHomePage-communicationContent">
+                    <div class="StaticLoggedOutHomePage-communicationItem"><i class="fab fa-twitter" style="color: white; font-size:27px;margin-bottom:6px;margin-top:13px"></i></div>
+                    <a asp-area="" asp-controller="Home" asp-action="Index">
+                        <div class="StaticLoggedOutHomePage-communicationItem" style="border-radius:25px;padding: 10px;">
+                            <span class="Icon">
+                                <i class="fas fa-home"></i>
+                            </span>Anasayfa
+                        </div>
+                    </a>
+                    <a asp-area="" asp-controller="Home" asp-action="UserExplore">
+                        <div class="StaticLoggedOutHomePage-communicationItem" style="border-radius:25px;padding: 10px;">
+                            <span class="Icon">
+                                <i class="fas fa-hashtag"></i>
+                            </span>Keşfet
+                        </div>
+                    </a>
+                    <a asp-area="" asp-controller="Home" asp-action="Notifications">
+                        <div class="StaticLoggedOutHomePage-communicationItem" style="border-radius:25px;padding: 10px;">
+                            <span class="Icon Icon--reply">
+                                <i class="far fa-bell"></i>
+                            </span>Bildirimler
+                        </div>
+                    </a>
+                    <a asp-area="" asp-controller="Home" asp-action="Messages">
+                        <div class="StaticLoggedOutHomePage-communicationItem" style="border-radius:25px;padding: 10px;">
+                            <span class="Icon Icon--reply">
+                                <i class="far fa-envelope"></i>
+                            </span>Mesajlar
+                        </div>
+                    </a>
+                    <a asp-area="" asp-controller="Home" asp-action="Profile">
+                        <div class="StaticLoggedOutHomePage-communicationItem" style="border-radius:25px;padding: 10px;">
+                            <span class="Icon Icon--reply">
+                                <i class="far fa-bookmark"></i>
+                            </span>Yer İşaretleri
+                        </div>
+                    </a>
+                    <a asp-area="" asp-controller="Home" asp-action="Profile" style="border-radius:25px;padding: 10px;">
+                        <div class="StaticLoggedOutHomePage-communicationItem">
+                            <span class="Icon Icon--reply">
+                                <i class="far fa-list-alt"></i>
+                            </span>Listeler
+                        </div>
+                    </a>
+                    <a asp-area="" asp-controller="Home" asp-action="Profile">
+                        <div class="StaticLoggedOutHomePage-communicationItem" style="border-radius:25px;padding: 10px;">
+                            <span class="Icon Icon--reply">
+                                <i class="far fa-user"></i>
+                            </span>Profil
+                        </div>
+                    </a>
+                    <a asp-area="" asp-controller="Home" asp-action="Profile">
+
+                        <div class="StaticLoggedOutHomePage-communicationItem" style="border-radius:25px;padding: 10px;">
+                            <span class="Icon Icon--reply">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </span>Daha Fazla
+                        </div>
+                    </a>
+                    <div class="sign-up-box">
+                        <input type="submit" value="Tweetle" id="submit_button" class="signup EdgeButton EdgeButton--primary EdgeButton--large submit">
+                    </div>
+                </div>
+
+                <div class="container" style="width:220px;margin-top:70rem;margin-left:12rem;border-radius:16px;" id="ppLogout">
+                    <a href="#" data-toggle="popover" data-placement="top">
+                        <div class="media border p-3" style="width:220px;margin-left:30px;margin-top:30px;border:none !important;">
+                            <img src="~/img/pp.jpg" alt="john doe" class="mr-3 mt-3 rounded-circle" style="width:40px;">
+                            <div class="media-body" style="width:60px;">
+                                <h4 style="font-size:15px;font-weight:700;line-height:20px;color:white">@ViewBag.Name</h4>
+                                <p style="font-size:15px;font-weight:400;line-height:20px;color:#8899a6">@ViewBag.UserName</p>
+                            </div>
+                            <i class="fa fa-angle-down" aria-hidden="true" style="font-size:15px;color:white;margin-right:10px;margin-top:20px;"></i>
+                        </div>
+
+                    </a>
+                </div>
+
+                <ul class="list-group custom-popover" id="popover-content" style="display: none;background-color: #15202B !important;">
+                    <li class="list-group-item">
+
+                        @*<img src="~/img/pp.jpg" style="width:20px !important;height:20px !important;">*@
+                        <div class="media-body" id="out_things">
+                            <h4 style="font-size:15px;font-weight:700;line-height:20px;color:white">@ViewBag.Name</h4>
+                            <p style="font-size:15px;font-weight:400;line-height:20px;color:#8899a6">@ViewBag.UserName</p>
+
+                            <i class="fa fa-angle-down" aria-hidden="true" style="font-size:15px;color:white;margin-right:10px;margin-top:20px;"></i>
+                        </div>
+                    </li>
+                    <li class="list-group-item" id="out_things" style="margin:0;border:none !important;">Varolan bir hesap ekle</li>
+                    <li class="list-group-item"><a id="out_things" asp-controller="Home" asp-action="Logout">@ViewBag.UserName hesabından çık</a></li>
+                </ul>
+
+            </div>
+
+            @RenderBody()
+
+
+            <div id="stn" class="col-sm-4">
+                <div id="right-pnl" class="panel panel-default panel-custom">
+                    <div class="panel-heading">
+                        <h3 class="panel-title" style="color:white;">
+                            <strong>Kimi takip etmeli</strong>
+                            <!-- <small><a href="#">Refresh</a> ● <a href="#">View all</a></small> -->
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="media">
+                            <div class="media-left">
+                                <img src="http://placehold.it/32x32" alt="" class="media-object img-rounded">
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Nome e cognome</h4>
+                                <a href="#" class="btn btn-default btn-xs">
+                                    Takip Et
+                                </a>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media-left">
+                                <img src="http://placehold.it/32x32" alt="" class="media-object img-rounded">
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Nome e cognome</h4>
+                                <a href="#" class="btn btn-default btn-xs">
+                                    Takip Et
+                                </a>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media-left">
+                                <img src="http://placehold.it/32x32" alt="" class="media-object img-rounded">
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">Nome e cognome</h4>
+                                <a href="#" class="btn btn-default btn-xs">
+                                    Takip Et
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        <a style="font-size: 15px;" href="www.google.it">
+                            Daha Fazla Göster
+                        </a>
+                    </div>
+                </div>
+                <div class="well well-sm">
+                    <ul class="list-inline">
+                        <li><a href="#">Şartlar</a></li>
+                        <li><a href="#">Gizlilik Politikası</a></li>
+                        <li><a href="#">Çerezler</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Reklam Bilgisi</a></li>
+                        <li><a href="#">Daha Fazla</a></li>
+                        <li>© 2020 Twitter,Inc.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
+<script>
+    $(document).ready(function() {
+  $('[data-toggle="popover"]').popover({
+    html: true,
+    content: function() {
+      return $('#popover-content').html();
+    }
+  });
+});
+</script>

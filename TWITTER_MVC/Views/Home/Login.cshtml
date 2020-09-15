@@ -1,0 +1,75 @@
+﻿@model TWITTER_MVC.Models.User
+@{
+    ViewData["Title"] = "Login";
+    Layout = null;
+}
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Twitter</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="~/css/login.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="card card-body text-center mt-5" style=" border:none !important;">
+                    <i class="fab fa-twitter" style="color: white; font-size:36px;margin-bottom:30px;"></i>
+                    <h1 class="heading" style="color: white;">Twitter'a giriş yap</h1>
+                    <p style="color:#e0245e !important;font-size:15px;line-height:20px;font-weight:400">@ViewBag.Message</p>
+                    <form id="tip-form" asp-action="Login" method="post">
+                        <div class="form-group">
+                            <div>
+                                <label asp-for="UserName" for="input-group">Telefon, e-posta veya kullanıcı adı</label>
+                                <div class="input-group">
+                                    <input asp-for="UserName" type="text" class="form-control" id="nm">
+                                </div>
+                            </div>
+                            <div style="margin-top:10px;">
+                                <label asp-for="Password" for="input-group">Şifre</label>
+                                <div class="input-group">
+                                    <input asp-for="Password" type="password" class="form-control" id="pw">
+                                </div>
+                            </div>
+                        </div>
+                            <div class="sign-up-box">
+                                <input type="submit" value="Giriş Yap" id="submit_button" class="signup EdgeButton EdgeButton--primary EdgeButton--large submit">
+                            </div>
+                            <div class="LoginForm-rememberForgot">
+                                <a class="forgot" href="begin_password_reset.html" rel="noopener" style="color: #1da1f2;">Şifreni mi unuttun?</a>
+                                <span class="separator" style="color:#99A4B1;">&middot;</span>
+                                
+                                    <a asp-area="" asp-controller="Home" asp-action="Signup" id="login-signup-link" style="color: #1da1f2;">Twitter'a kaydol&#32;&raquo;</a>
+                                   
+                            </div>
+
+                    </form>
+                    <hr>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

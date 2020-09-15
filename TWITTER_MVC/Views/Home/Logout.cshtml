@@ -1,0 +1,50 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/logout.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <div class="container" id="gorunur">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="card card-body text-center mt-5" style="width: 32rem;padding: 5px;">
+                    <i class="fab fa-twitter" style="color: white; font-size:30px;margin-bottom:10px;margin-top: 30px;"></i>
+                    <h1 class="heading" style="color: white; font-size: 19px;
+      line-height: 25px;
+      font-weight: 700;">
+                        Twitter'dan çıkış yapılsın mı?
+                    </h1>
+                    <p style="font-size: 15px;font-weight: 400;line-height: 20px;color:#8899a6">İstediğin zaman tekrar oturum açabilirsin.Hesap değiştirmek istiyorsan, bunu "Hesap bilgileri" bölümünden yapabilirsin.</p>
+                    <div class="row" id="tit" style="text-align:center;margin-left:20px;">
+                        <input style="width: 10rem !important;height: 20px !important;margin-right: 10px;" type="submit" value="İptal" id="submit_button">
+                        <a asp-area="" asp-controller="Home" asp-action="Explore">
+                            <input style="width: 15rem !important;height: 20px !important;margin-right: 10px;" type="submit" value="Çıkış yap" id="submit_button2">
+                        </a>
+                    </div>
+                    <hr>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+

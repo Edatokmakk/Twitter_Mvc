@@ -1,0 +1,34 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/css/follower.css" rel="stylesheet" type="text/css" />
+
+<div id="stn" class="col-sm-5">
+    <div class="row" id="w">
+        <ul class="nav nav-tabs-fluid" id="tbs">
+            <li class="nav-item">
+                <a class="nav-link active" style="width:100%" data-toggle="pill" href="#">Takip Edilenler</a>
+            </li>
+        </ul>
+    </div>
+    @foreach (User item in ViewBag.fw)
+    {
+        <div class="row" style="border-bottom: 1px groove #a5a9ac !important;">
+            <div class="media" style="margin-top:15px;">
+                <div class="media-left">
+                    <img src="~/images/@item.ProfilePicture" alt="john doe" class="rounded-circle" style="width:40px;">
+                </div>
+                <div class="media-body">
+                    <div>
+                        <h4 class="media-heading">@item.Name</h4>
+                        <p id="uId">@item.UserName</p>
+                    </div>
+                    <a type="submit" style="float:right !important;background-color:#1DA1F2 !important;color:white !important; margin-top:-4rem;" href="#" class="btn btn-default btn-xs btnFollowID">
+                        Takip Ediliyor
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    }
+</div>

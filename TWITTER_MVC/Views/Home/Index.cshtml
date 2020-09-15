@@ -1,0 +1,101 @@
+﻿@model TWITTER_MVC.Models.Tweets
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/~/css/anasayfa.css" rel="stylesheet" type="text/css" />
+<div id="stn" class="col-sm-5">
+    <div id="ttlrow" class=row>
+        <p style="color:white;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: 19px;font-weight: 800;line-height:25px;margin-left: 2rem;margin-top:1rem;">Anasayfa</p>
+        <img src="~/img/sparkle.png" style="width: 25px;height:25px;margin-left: 54rem;margin-top: 1rem;">
+    </div>
+
+    <div class="tweet-box-content">
+        <div class="tweetbox-user-icon-col">
+            <img src="~/images/@ViewBag.ProfilePicture" alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:50px;">
+        </div>
+
+        <div class="tweetbox-message-content">
+            <form class="input-group" asp-action="Tweet" method="post">
+                <input asp-for="tweet" placeholder="Neler oluyor?" style="outline:none !important; border:none !important; font-style: normal; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                color:#c6c6c6;font-weight:400;font-size: 19px;line-height: 25px;background-color: #15202B !important;margin-top: 14px;" class="form-control">
+             
+                <div class="input-group-prepend">
+                    <span id="icn"><i class="fas fa-image"></i></span>
+                    <span id="icn"><i class="fas fa-poll"></i></span>
+                    <span id="icn"><i class="fas fa-poll"></i></span>
+                    <span id="icn"> <i class="fas fa-smile"></i></span>
+                    <input type="submit" value="Tweetle" id="submit_button" class="signup EdgeButton EdgeButton--primary EdgeButton--medium submit" style="width:90px !important;margin-left:35rem;">
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <div id="space" class=row style="background-color:#253341;height:10px;position:relative"></div>
+
+    @foreach (var item in @ViewBag.Twet)
+    {
+        @if (item.tweet != null)
+        {
+        <div class=row style="border-bottom: 1px groove #a5a9ac !important;border-left:1px groove #a5a9ac !important;">
+            <div class="tweet-box-content">
+                @*<p>@ViewBag.Rt</p>*@
+                <div class="tweetbox-user-icon-col">
+                    <img src="~/images/@item.ProfilePicture" alt="John Doe" class="mr-3 mt-3 ml-4 rounded-circle" style="width:50px;float:right !important;">
+                </div>
+
+                <div class="mt-3 tweetbox-message-content" style="width: 80% !important;color:white !important;">
+                    <h4 style="display:inline-block;margin-right:10px; font-size:15px;line-height:20px;font-weight:700;color:white;">@item.UsName</h4>
+                    <p style="display:inline-block; font-size:15px;line-height:20px;font-weight:400;color:#8899a6;">@item.UserName</p>
+                    <div class="input-group">
+
+                        <p style="font-size:15px;line-height:20px;font-weight:400;">@item.tweet</p>
+                        <div id="ikonlar">
+                            <ul class="nav nav-pills nav-pills-custom">
+                                <li>
+                                    <span id="icn2">
+                                        <i style=" margin-top:20px;font-size: 15px !important; color: grey !important;" class="far fa-comment"></i>
+                                    </span>
+                                </li>
+                                <li>
+                                    <form id="icn2" asp-action="Retweet" method="get">
+                                        <input id="twId" asp-for="TweetID" value="@item.TweetID" type="hidden" />
+                                        <input asp-for="tweet" value="@item.tweet" type="hidden" />
+                                        <input asp-for="UserName" value="@item.UserName" type="hidden" />
+                                        <input asp-for="User" value="@item.User" type="hidden" />
+                                        <input asp-for="UsName" value="@item.UsName" type="hidden" />
+                                        <input asp-for="Retweets" value="@item.Retweets" type="hidden" />
+                                        <input asp-for="Likes" value="@item.Likes" type="hidden" />
+                                        <input asp-for="ProfilePicture" value="@item.ProfilePicture" type="hidden" />
+                                        <button style="background-color:#15202B !important;border:none !important;outline:0 !important;">
+                                            <i style=" margin-left:15rem;margin-top:20px;font-size: 15px !important; color: grey !important;" class="fas fa-retweet"></i>
+                                        </button>
+                                    </form>
+                                </li>
+                                <li>
+                                    <form id="icn2" asp-action="Like" method="get">
+                                        <input id="twId" asp-for="TweetID" value="@item.TweetID" type="hidden" />
+                                        <input asp-for="tweet" value="@item.tweet" type="hidden" />
+                                        <button style="background-color:#15202B !important;border:none !important;outline:0 !important;">
+                                            @item.Retweets
+                                            <i style="margin-left:15rem;margin-top:20px;font-size: 15px !important;color: grey !important;padding:0;" class="far fa-heart"></i>
+                                        </button>
+                                    </form>
+                                </li>
+                                <li>
+                                    <span id="icn2">
+                                        @item.Likes
+                                        <i style=" margin-left:11rem;margin-top:20px; font-size: 15px !important;color: grey !important;" class="far fa-share-square"></i>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            }
+        }
+
+  
+</div>

@@ -1,0 +1,51 @@
+﻿#gorunur {
+    position: absolute;
+    z-index: 100 !important;
+    margin-top: 4rem;
+    margin-left: 23rem;
+    border-radius: 16px !important;
+}
+
+#arkaplan {
+    position: fixed;
+    z-index: 97 !important;
+    opacity: 0.3 !important;
+    background: linear-gradient( rgba(255, 240, 250, 0.5), rgba(255, 240, 240, 0.5) );
+}
+
+body {
+    background-color: #15202B !important;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.card {
+    background-color: #15202B !important;
+}
+
+.heading {
+    font-size: 23px;
+    line-height: 30px;
+    font-weight: 700;
+    float: left;
+}
+
+label {
+    color: #99A4B1;
+    float: left;
+    font-size:15px;
+    font-weight:400;
+    line-height:20px;
+}
+
+
+.sign-up-box {
+    margin-bottom: 30px;
+}
+
+/*.panel {
+    background-color: bisque;
+}*/
+
+/*.form-control {
+    background-color: #15202B !important;
+}*/

@@ -1,0 +1,43 @@
+﻿body {
+    background-color: #15202B !important;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.card {
+    background-color: #15202B !important;
+}
+
+.heading {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+label {
+    color: #99A4B1;
+    float: left;
+}
+
+#submit_button {
+    background-color: #1da1f2;
+    border: 1px solid #1da1f2;
+    border-radius: 100px;
+    box-shadow: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    height: auto;
+    line-height: 24px;
+    padding: 12px 20px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: 500px;
+}
+
+.sign-up-box {
+    margin-bottom: 30px;
+}
+
+.panel {
+    background-color: bisque;
+}

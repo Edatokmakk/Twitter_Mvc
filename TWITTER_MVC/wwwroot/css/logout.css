@@ -1,0 +1,75 @@
+﻿
+#gorunur {
+    position: absolute;
+    z-index: 100 !important;
+    margin-top: 20rem;
+    margin-left: 36rem;
+    border-radius: 16px !important;
+}
+
+#arkaplan {
+    position: fixed;
+    z-index: 97 !important;
+    opacity: 0.3 !important;
+    background: linear-gradient( rgba(255, 240, 250, 0.5), rgba(255, 240, 240, 0.5) );
+}
+
+body {
+    background-color: #39424C !important;
+}
+
+.card {
+    background-color: #15202B !important;
+    border-radius: 16px !important;
+}
+
+.heading {
+    font-size: 23px;
+    line-height: 30px;
+    font-weight: 700;
+    float: left;
+}
+
+label {
+    color: #99A4B1;
+    float: left;
+}
+
+
+.sign-up-box {
+    margin-bottom: 30px;
+}
+
+.panel {
+    background-color: bisque;
+}
+
+#submit_button {
+    margin-top: 10px;
+    color: white;
+    border-radius: 100px;
+    border: none;
+    box-shadow: none;
+    background-color: #39424C;
+    font-size: 15px;
+    font-weight: bold;
+    height: 25px;
+    text-align: center;
+    white-space: nowrap;
+    padding-bottom: 30px;
+}
+
+#submit_button2 {
+    margin-top: 10px;
+    background-color: #1da1f2;
+    border: none;
+    border-radius: 100px;
+    box-shadow: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    height: 25px;
+    text-align: center;
+    white-space: nowrap;
+    padding-bottom: 30px;
+}
